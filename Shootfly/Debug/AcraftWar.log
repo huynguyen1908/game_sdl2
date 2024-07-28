@@ -1,0 +1,18 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (AcraftWar.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  BaseObj.cpp
+  BulletObj.cpp
+  ExplosionObject.cpp
+  GameMain.cpp
+  Geometric.cpp
+  ImpTimer.cpp
+  main.cpp
+  MenuGame.cpp
+  PlayerBlood.cpp
+  PlayerObj.cpp
+  Sound.cpp
+  TCommon.cpp
+  TextObject.cpp
+  TrObject.cpp
+D:\project\AcraftWar\AcraftWar\TrObject.cpp(292,22): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  Generating Code...
+  AcraftWar.vcxproj -> D:\project\AcraftWar\Debug\Shootfly.exe

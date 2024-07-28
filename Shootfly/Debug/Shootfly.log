@@ -1,0 +1,17 @@
+﻿  BaseObj.cpp
+  BulletObj.cpp
+  ExplosionObject.cpp
+  GameMain.cpp
+  Geometric.cpp
+  ImpTimer.cpp
+  main.cpp
+  MenuGame.cpp
+  PlayerBlood.cpp
+  PlayerObj.cpp
+  Sound.cpp
+  TCommon.cpp
+  TextObject.cpp
+  TrObject.cpp
+D:\project\Shootfly\Shootfly\TrObject.cpp(292,22): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  Generating Code...
+  Shootfly.vcxproj -> D:\project\Shootfly\Debug\Shootfly.exe
