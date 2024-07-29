@@ -60,7 +60,6 @@ MenuGameStart::~MenuGameStart()
     FreeData();
 }
 
-
 void MenuGameStart::SetImgOptionList(const VT(BaseObj*)& img_list)
 {
     FreeData();

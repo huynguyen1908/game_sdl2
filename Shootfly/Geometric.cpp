@@ -1,5 +1,3 @@
-
-
 #include "Geometric.h"
 
 void Gemometric::RenderRectange(const GeoFormat& geo_data, SDL_Renderer* screen)

@@ -1,6 +1,4 @@
-
 #include "BaseObj.h"
-
 
 BaseObj::BaseObj()
 {
