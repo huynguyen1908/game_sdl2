@@ -141,10 +141,11 @@ void PlayerObj::InputKey(SDL_Event event, SDL_Renderer* screen)
     {
         if (event.key.keysym.sym == SDLK_UP)
         {
+           
             m_MovStyle.sUp = true;
             m_MovStyle.sDown = false;
         }
-        else if (event.key.keysym.sym == SDLK_DOWN)
+        else if (event.key.keysym.sym == SDLK_DOWN )
         {
             m_MovStyle.sUp = false;
             m_MovStyle.sDown = true;
@@ -156,6 +157,22 @@ void PlayerObj::InputKey(SDL_Event event, SDL_Renderer* screen)
         }
         else if (event.key.keysym.sym == SDLK_RIGHT)
         {
+            m_MovStyle.sLeft = false;
+            m_MovStyle.sRight = true;
+        }
+        else if (event.key.keysym.sym == SDLK_w) {
+            m_MovStyle.sUp = true;
+            m_MovStyle.sDown = false;
+        }
+        else if (event.key.keysym.sym == SDLK_s) {
+            m_MovStyle.sUp = false;
+            m_MovStyle.sDown = true;
+        }
+        else if (event.key.keysym.sym == SDLK_a) {
+            m_MovStyle.sLeft = true;
+            m_MovStyle.sRight = false;
+        }
+        else if (event.key.keysym.sym == SDLK_d) {
             m_MovStyle.sLeft = false;
             m_MovStyle.sRight = true;
         }
@@ -178,7 +195,20 @@ void PlayerObj::InputKey(SDL_Event event, SDL_Renderer* screen)
         {
             m_MovStyle.sDown = false;
         }
-    }
+        else if (event.key.keysym.sym == SDLK_w) {
+            m_MovStyle.sUp = false;
+        }
+        else if (event.key.keysym.sym == SDLK_s) {
+            m_MovStyle.sDown = false;
+        }
+        else if (event.key.keysym.sym == SDLK_a) {
+            m_MovStyle.sLeft = false;
+        }
+        else if (event.key.keysym.sym == SDLK_d) {
+            m_MovStyle.sRight = false;
+        }
+
+    } 
     else if (event.type == SDL_MOUSEBUTTONDOWN)
     {
         if (event.button.button == SDL_BUTTON_LEFT)

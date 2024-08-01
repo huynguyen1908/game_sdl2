@@ -132,3 +132,51 @@ void MenuGameStart::MenuAction(SDL_Event events, SDL_Renderer* screen)
     default: break;
     }
 }
+
+// MENU END GAME
+
+MenuGameEnd::MenuGameEnd()
+{
+    m_Select = -1;
+}
+
+MenuGameEnd::~MenuGameEnd()
+{
+
+}
+
+void MenuGameEnd::SetImgOptionList(const VT(BaseObj*)& img_list)
+{
+    m_ImgOptionList = img_list;
+}
+
+void MenuGameEnd::FreeData()
+{
+    MenuGame::Free();
+    if (m_ImgOptionList.empty())
+    {
+        for (auto x : m_ImgOptionList)
+        {
+            if (x != NULL)
+            {
+                x->Free();
+            }
+        }
+        m_ImgOptionList.clear();
+    }
+}
+
+void MenuGameEnd::Render(SDL_Renderer* screen)
+{
+    MenuGame::Render(screen);
+    //for(auto x : m_TextList)
+    //{
+    //    x->LoadFromRenderedText(m_Font, screen);
+    //    x->RenderText(screen);
+    //}
+
+    for (auto x : m_ImgOptionList)
+    {
+        x->Render(screen);
+    }
+}

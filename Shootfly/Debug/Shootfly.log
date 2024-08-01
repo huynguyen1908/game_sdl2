@@ -1,2 +1,6 @@
-﻿  BaseObj.cpp
+﻿  GameMain.cpp
+  MenuGame.cpp
+  PlayerObj.cpp
+  main.cpp
+  Generating Code...
   Shootfly.vcxproj -> D:\Shootfly\Debug\Shootfly.exe
