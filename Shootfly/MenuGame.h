@@ -61,7 +61,7 @@ public:
 	void SetImgOptionList(const VT(BaseObj*)& img_list);
 	void FreeData();
 	void Render(SDL_Renderer* screen);
-	//void MenuAction(SDL_Event events, SDL_Renderer* screen);
+	void MenuAction(SDL_Event events, SDL_Renderer* screen);
 
 private:
 	VT(BaseObj*) m_ImgOptionList;

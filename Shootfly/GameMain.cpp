@@ -94,7 +94,33 @@ void GameMain::InitStartGame()
         menu_list.push_back(playObj);
     }
 
+    bool b3a = ExitObj->LoadImg("image\\exit.png", m_Screen);
+    bool b3b = ExitObj->LoadImg("image\\exit_s.png", m_Screen, 1);
+    if (b3a && b3b)
+    {
+        y_pos += 50;
+        ExitObj->SetRect(x_pos, y_pos);
+        menu_list.push_back(ExitObj);
+    }
+
     m_StartMenu.SetImgOptionList(menu_list);
+}
+
+void GameMain::InitEndGame()
+{
+    // End menu;
+    m_EndMenu.SetIsBkgn(false);
+
+    BaseObj* qObj = new BaseObj();
+    bool ret1 = qObj->LoadImg("image\\exit.png", m_Screen);
+    bool ret2 = qObj->LoadImg("image\\exit_s.png", m_Screen, 1);
+    VT(BaseObj*) end_list;
+    if (ret1 && ret2)
+    {
+        qObj->SetRect((const int)(SCREEN_WIDTH * 0.5 - 80), (const int)(H_HEIGHT + 50));
+        end_list.push_back(qObj);
+    }
+    m_EndMenu.SetImgOptionList(end_list);
 }
 
 bool GameMain::LoadData()
@@ -113,6 +139,7 @@ bool GameMain::LoadData()
 
     InitFrameInfo();
     InitStartGame();
+    InitEndGame();
     InitTObj();
 
     m_PlayerBlood.Init(m_Screen);
@@ -202,6 +229,10 @@ void GameMain::Loop()
             else if (m_GameState == GameStatus::GAME_PLAYING)
             {
                 m_Player.InputKey(m_Event, m_Screen);
+            }
+            else if (m_GameState == GameStatus::GAME_END)
+            {
+                m_EndMenu.MenuAction(m_Event, m_Screen);
             }
         }
 
@@ -423,6 +454,7 @@ void GameMain::Close()
 
     m_TObjList.clear();
     m_StartMenu.FreeData();
+    m_EndMenu.FreeData();
 
     SDL_DestroyRenderer(m_Screen);
     m_Screen = NULL;

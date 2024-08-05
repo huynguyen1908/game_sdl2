@@ -169,14 +169,52 @@ void MenuGameEnd::FreeData()
 void MenuGameEnd::Render(SDL_Renderer* screen)
 {
     MenuGame::Render(screen);
-    //for(auto x : m_TextList)
-    //{
-    //    x->LoadFromRenderedText(m_Font, screen);
-    //    x->RenderText(screen);
-    //}
-
     for (auto x : m_ImgOptionList)
     {
         x->Render(screen);
+    }
+}
+
+void MenuGameEnd::MenuAction(SDL_Event events, SDL_Renderer* screen)
+{
+    switch (events.type)
+    {
+    case SDL_MOUSEBUTTONDOWN:
+    {
+        int x = events.button.x;
+        int y = events.button.y;
+        for (size_t i = 0; i < m_ImgOptionList.size(); ++i)
+        {
+            SDL_Rect item_rect = m_ImgOptionList[i]->GetRect();
+            bool bRet = OnRect(x, y, item_rect);
+            if (bRet)
+            {
+                m_Select = i;
+                break;
+            }
+        }
+        break;
+    }
+    case SDL_MOUSEMOTION:
+    {
+        int x = events.button.x;
+        int y = events.button.y;
+        for (size_t i = 0; i < m_ImgOptionList.size(); ++i)
+        {
+            m_ImgOptionList[i]->SetTextureIndex(0);
+            SDL_Rect item_rect = m_ImgOptionList[i]->GetRect();
+            bool bRet = OnRect(x, y, item_rect);
+            if (bRet)
+            {
+                m_ImgOptionList[i]->SetTextureIndex(1);
+            }
+            else
+            {
+                m_ImgOptionList[i]->SetTextureIndex(0);
+            }
+        }
+        break;
+    }
+    default: break;
     }
 }

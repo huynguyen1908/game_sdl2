@@ -28,6 +28,7 @@ public:
 	void InitFrameInfo();
 	void SetStateGame();
 	void InitStartGame();
+	void InitEndGame();
 private:
 	static GameMain* m_Instance;
 	int m_GameState;
@@ -48,7 +49,8 @@ private:
 
 	unsigned int m_Frame1s;
 
-	MenuGameStart m_StartMenu;
+	MenuGameStart m_StartMenu; 
+	MenuGameEnd m_EndMenu;
 };
 
 
