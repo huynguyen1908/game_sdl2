@@ -67,5 +67,21 @@ private:
 	VT(BaseObj*) m_ImgOptionList;
 
 };
+// Menu pause game
+class MenuGamePause : public MenuGame
+{
+public:
+	MenuGamePause();
+	~MenuGamePause();
+	void SetImgOptionList(const VT(BaseObj*)& img_list);
+	void FreeData();
+	void Render(SDL_Renderer* screen);
+	void MenuAction(SDL_Event events, SDL_Renderer* screen);
+	void InitFrameGeo();
+private:
+	VT(BaseObj*) m_ImgOptionList;
+	GeoFormat m_Rect;
+	GeoFormat m_RectOutLine;
+};
 #endif
 
