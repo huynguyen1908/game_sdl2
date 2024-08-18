@@ -162,7 +162,9 @@
     <ClCompile Include="MenuGame.cpp" />
     <ClCompile Include="PlayerBlood.cpp" />
     <ClCompile Include="PlayerObj.cpp" />
+    <ClCompile Include="Sound.cpp" />
     <ClCompile Include="TCommon.cpp" />
+    <ClCompile Include="TextObject.cpp" />
     <ClCompile Include="TrObject.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -176,7 +178,9 @@
     <ClInclude Include="MenuGame.h" />
     <ClInclude Include="PlayerBlood.h" />
     <ClInclude Include="PlayerObj.h" />
+    <ClInclude Include="Sound.h" />
     <ClInclude Include="TCommon.h" />
+    <ClInclude Include="TextObject.h" />
     <ClInclude Include="TrObject.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

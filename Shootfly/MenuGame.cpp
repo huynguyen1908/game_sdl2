@@ -139,6 +139,7 @@ void MenuGameStart::MenuAction(SDL_Event events, SDL_Renderer* screen)
 MenuGameEnd::MenuGameEnd()
 {
     m_Select = -1;
+    m_Font = NULL;
 }
 
 MenuGameEnd::~MenuGameEnd()
@@ -148,6 +149,7 @@ MenuGameEnd::~MenuGameEnd()
 
 void MenuGameEnd::SetImgOptionList(const VT(BaseObj*)& img_list)
 {
+    FreeData();
     m_ImgOptionList = img_list;
 }
 
@@ -165,11 +167,23 @@ void MenuGameEnd::FreeData()
         }
         m_ImgOptionList.clear();
     }
+
+    for (auto t : m_TextList)
+    {
+        t->Free();
+    }
+    m_TextList.clear();
 }
 
 void MenuGameEnd::Render(SDL_Renderer* screen)
 {
     MenuGame::Render(screen);
+    for (auto x : m_TextList)
+    {
+        x->LoadFromRenderedText(m_Font, screen);
+        x->RenderText(screen);
+    }
+
     for (auto x : m_ImgOptionList)
     {
         x->Render(screen);
@@ -220,6 +234,18 @@ void MenuGameEnd::MenuAction(SDL_Event events, SDL_Renderer* screen)
     }
 }
 
+void MenuGameEnd::SetTextContent(std::string sData, int idx)
+{
+    if (idx >= 0 && idx < (int)m_TextList.size())
+    {
+        TextObject* pText = m_TextList[idx];
+        if (pText)
+        {
+            pText->SetText(sData);
+        }
+    }
+}
+
 // Menu pause game
 
 MenuGamePause::MenuGamePause()
@@ -257,9 +283,9 @@ void MenuGamePause::FreeData()
 
 void MenuGamePause::InitFrameGeo()
 {
-    int x1 = H_WIDTH - 120;
+    int x1 = H_WIDTH - 100;
     int y1 = H_HEIGHT - 60;
-    m_Rect.rect_ = { x1, y1, 300, 120 };
+    m_Rect.rect_ = { x1, y1, 225, 120 };
     m_Rect.color_ = TCommon::GetBaseColor(GRAY_COLOR);
 
     int x2 = m_Rect.rect_.x + 1;
@@ -270,7 +296,7 @@ void MenuGamePause::InitFrameGeo()
     m_RectOutLine.rect_ = { x2, y2, w2, h2 };
     m_RectOutLine.color_ = TCommon::GetBaseColor(WHITE_COLOR);
 
-    int xPos = m_Rect.rect_.x + 100;
+    int xPos = m_Rect.rect_.x + 50;
     int yPos = m_Rect.rect_.y + 10;
 
     for (size_t i = 0; i < m_ImgOptionList.size(); i++)

@@ -1,4 +1,3 @@
-
 #ifndef DEFINE_H_
 #define DEFINE_H_
 
@@ -6,6 +5,7 @@
 #include <SDL_image.h>
 #include <SDL_mixer.h>
 #include <time.h>
+#include <SDL_ttf.h>
 
 #include<string>
 #include<vector>
@@ -27,6 +27,8 @@ const int COLOR_KEY_BLUE = 125;
 const int FRAMES_PER_SECOND = 35;
 
 #define FRAME_HEIGHT 45
+
+static char g_MenuFont[] = { "font\\pilotcommand.otf" };
 
 typedef struct MovingStyle
 {

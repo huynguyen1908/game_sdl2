@@ -1,4 +1,3 @@
-
 #include "TextObject.h"
 
 

@@ -1,11 +1,9 @@
-
-
 #ifndef MENU_GAME_H_
 #define MENU_GAME_H_
 #include "define.h"
 #include "BaseObj.h"
 #include "Geometric.h"
-
+#include "TextObject.h"
 
 class MenuGame
 {
@@ -62,9 +60,14 @@ public:
 	void FreeData();
 	void Render(SDL_Renderer* screen);
 	void MenuAction(SDL_Event events, SDL_Renderer* screen);
+	void SetTextContent(std::string sData, int idx);
+	void AddTextObj(TextObject* obj) { m_TextList.push_back(obj); }
+	void SetFont(TTF_Font* font) { m_Font = font; }
 
 private:
 	VT(BaseObj*) m_ImgOptionList;
+	VT(TextObject*) m_TextList;
+	TTF_Font* m_Font;
 
 };
 // Menu pause game
