@@ -1,5 +1,6 @@
 # GIỚI THIỆU GAME SHOOTFLY
----
+Video giới thiệu game: https://drive.google.com/file/d/1p8PUZaKYtf6fxdQ-BSqEqZw98yBTFYPG/view?usp=sharing
+
 ## Giới thiệu chung
 Game Shootfly là một trò chơi đơn giản nhưng thú vị, nơi bạn điều khiển một chiếc máy bay chiến đấu để bắn hạ các máy bay địch xuất hiện trên màn hình. Nhiệm vụ của bạn là bắn hạ càng nhiều máy bay địch càng tốt mà không để bị chúng va chạm.
 ![Home](https://github.com/user-attachments/assets/e251567b-2122-4a09-8493-2cbc27be16f5)
@@ -17,7 +18,7 @@ Các thư viện SDL cần thiết đã được thêm vào project(trong thư m
 Đưa mode build về debug-x86
 4. **Bấm vào `Local Windows Debugger` để khởi động game**
 
----
+
 ## Hướng Dẫn Chơi
 
 - **Di chuyển**: Sử dụng các phím mũi tên  `←` `→` `↑` `↓`   hoặc `A` `D` `W` `S` để điều khiển máy bay di chuyển sang 2 bên và lên xuống để né đạn và kẻ thù.
@@ -25,7 +26,7 @@ Các thư viện SDL cần thiết đã được thêm vào project(trong thư m
 - **Mục tiêu**: Tiêu diệt càng nhiều máy bay địch càng tốt. Tránh va chạm với máy bay địch để không bị thua.
 - **Kết thúc game**: Game kết thúc khi máy bay của bạn hết thanh máu.
 
----
+
 # Một vài chức năng chính
 - **Bắt đầu game**: ấn vào Start để chơi, Exit để thoát ra.
 ![Home](https://github.com/user-attachments/assets/e251567b-2122-4a09-8493-2cbc27be16f5)
@@ -36,7 +37,7 @@ Các thư viện SDL cần thiết đã được thêm vào project(trong thư m
 ![Blood-and-point](https://github.com/user-attachments/assets/8025b42b-6ed3-4d8a-816e-4ac1422bdaae)
 - **Âm thanh**: âm thanh khi bắn đạn, khi va chạm,...
 
----
+
 ## Các công nghệ sử dụng
 - Ngôn ngữ phát triển: C++
 - Thư viện đồ họa: SDL2
@@ -46,7 +47,7 @@ Các thư viện SDL cần thiết đã được thêm vào project(trong thư m
 - Áp dụng lập trình hướng đối tượng OOP trong việc quản lý các đối tượng có trong game.
 - Xử lý va chạm, tính toán điểm va chạm.
 - Xử lý dữ kiện bàn phím, âm thanh, hình ảnh.
----
+
 ## Nguồn tham khảo
 - [LazyFoo SDL Tutorial](https://lazyfoo.net/tutorials/SDL/index.php)
 - [Lập trình game C++](https://www.youtube.com/c/Ph%C3%A1tTri%E1%BB%83nPh%E1%BA%A7nM%E1%BB%81m123AZ)
