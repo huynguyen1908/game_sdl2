@@ -2,7 +2,7 @@
 ---
 ## Giới thiệu chung
 Game Shootfly là một trò chơi đơn giản nhưng thú vị, nơi bạn điều khiển một chiếc máy bay chiến đấu để bắn hạ các máy bay địch xuất hiện trên màn hình. Nhiệm vụ của bạn là bắn hạ càng nhiều máy bay địch càng tốt mà không để bị chúng va chạm.
-![alt text](Home.png)
+![Home](https://github.com/user-attachments/assets/e251567b-2122-4a09-8493-2cbc27be16f5)
 
 ## Cài đặt
 1. **Cài đặt `Visual Studio 2022`**
@@ -28,12 +28,12 @@ Các thư viện SDL cần thiết đã được thêm vào project(trong thư m
 ---
 # Một vài chức năng chính
 - **Bắt đầu game**: ấn vào Start để chơi, Exit để thoát ra.
-![alt text](Home.png)
+![Home](https://github.com/user-attachments/assets/e251567b-2122-4a09-8493-2cbc27be16f5)
 - **Tạm dừng**: ấn phím `SPACE` để tạm dừng, ấn `Resume` để tiếp tục chơi.
-![alt text](Pause.png)
+![Pause](https://github.com/user-attachments/assets/5a9989b1-42b6-49ca-9715-c0cb6cd4ac80)
 - **Tính điểm**: mỗi lần phá hủy 1 máy bay của địch thì sẽ được tính là 1 điểm, riêng 2 máy bay cố định màu đỏ thì tính 3 điểm.
 - **Thanh máu**: Với mỗi lần va chạm với máy bay địch hoặc trúng đạn thì sẽ bị trừ 1 cọc, hết thanh máu tương ứng với 5 lần va chạm thì sẽ thua cuộc.
-![alt text](Blood-and-point.png)
+![Blood-and-point](https://github.com/user-attachments/assets/8025b42b-6ed3-4d8a-816e-4ac1422bdaae)
 - **Âm thanh**: âm thanh khi bắn đạn, khi va chạm,...
 
 ---
